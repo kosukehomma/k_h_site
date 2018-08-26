@@ -1,0 +1,21 @@
+<%
+var pageTitle, pageStyle
+%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% if(pageTitle) {%><%= pageTitle %> - K.H.site<% } else { %>K.H.site<% } %></title>
+    <meta name="description" content="<%= config.description %>">
+    <meta name="author" content="<%= config.author %>">
+    <meta name="robots" content="noindex">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<%= config.title %>">
+    <meta property="og:title" content="<% if (pageTitle !== 'index') { pageTitle + ' | ' } config.title %>">
+    <meta property="og:description" content="<%= config.description %>">
+    <meta property="og:url" content="<%= config.publicPath %>">
+    <meta property="og:image" content="<%= config.publicPath %>/image/fb.png">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/<%= pageStyle %>.css">
+    <link rel="stylesheet" href="./assets/css/multi-device.css">
+</head>

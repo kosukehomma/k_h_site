@@ -1,0 +1,194 @@
+@charset 'utf-8';
+@import 'parts/_env.scss';
+
+.content-section {
+    max-width: 100vw;
+    width: auto;
+    margin: 0 auto;
+    padding: 2rem 1rem 2rem 4rem;
+    min-height: 90vh;
+    border-bottom: 1px solid #dddddd;
+    background: #fff;
+    color: #203c27;
+    @include flexbox();
+    @include flex-direction(row);
+    align-items: center;
+
+    .greeting-box,
+    .career-box,
+    .skills-box,
+    .interest-box {
+        display: block;
+        padding: 0 .5rem;
+        p {
+            margin-top: .75rem;
+        }
+    }
+/* about area */
+    .about-me {
+        @include font(76);
+        font-weight: 500;
+        letter-spacing: -0.5rem;
+        span {
+            color: #80b827;
+            letter-spacing: -0.75rem;
+        }
+        + p {
+            margin-top: 3.5rem;
+        }
+    }
+    .sns-contact {
+        display: block;
+        margin-top: 4rem;
+        .sns-icons {
+            list-style: none;
+            padding-left: 0;
+            li {
+                display: inline-block;
+                margin-right: 3rem;
+                img {
+                    max-width: 60px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+/* about area end */
+/* career area */
+    .career-title {
+        @include font(48);
+        font-weight: normal;
+        color: #007727;
+        letter-spacing: -0.25rem;
+    }
+    .career-detail {
+        margin-top: 1.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #ddd;
+        @include flexbox();
+        &:last-child {
+            border-bottom: none;
+        }
+        .career-section {
+            display: block;
+            box-sizing: border-box;
+            max-width: 75%;
+            width: 100%;
+            padding: 0rem 2.5rem 0rem 0;
+            @include font(13);
+            line-height: 1.6;
+            p,ul {
+                margin-top: 1rem;
+                letter-spacing: -1px;
+            }
+            ul {
+                padding-left: 1.75rem;
+            }
+        }
+        .career-category {
+            @include font(22);
+            font-weight: normal;
+            span {
+                display: block;
+                margin-top: -.5rem;
+                @include font(12);
+            }
+            + p {
+                margin-top: 1.5rem;
+            }
+        }
+        .career-date {
+            display: block;
+            box-sizing: border-box;
+            max-width: 25%;
+            width: 100%;
+            min-width: 200px;
+            text-align: right;
+            word-wrap:break-word;
+            span {
+                font-weight: 500;
+                 color: #007727;
+                 @include font(12)
+            }
+        }
+    }
+/* career area end */
+/* skills area */
+    .whats-skills {
+        @include font(56);
+        font-weight: 500;
+        letter-spacing: 0.5rem;
+        margin-bottom: 4rem;
+        span {
+            color: #20a44b;
+            letter-spacing: -0.25rem;
+        }
+
+    }
+    .skills-lead {
+        font-weight: 500;
+        @include font(24);
+        color: #3e8d58;
+        letter-spacing: -0.05rem;
+        
+        &-sub {
+            @include font(16);
+            color: #3e8d58;
+            margin-top: 1.75rem !important;
+            margin-bottom: -0.75rem;
+        }
+    }
+    .skills-area {
+        display: block;
+        &:last-child {
+            margin-bottom: 2.5rem;
+        }
+        .skills-icons {
+            list-style: none;
+            padding-left: 0;
+            li {
+                display: inline-block;
+                max-width:64px;
+                width: 100%;
+                margin-top: 1.25rem;
+                text-align: center;
+                img {
+                    max-width: 38px;
+                    width: 100%;
+                    margin: auto;
+                }
+                span {
+                    @include font(10);
+                    transform: scale(0.85);
+                    display: block;
+                    margin: -4px 0 0;
+                    font-weight: 600;
+                    letter-spacing: 0.75px;
+                }
+                
+            }
+        }
+    }
+    .specialty {
+        margin-top: 3.5rem;
+    }
+/* skills area end */
+/* interest area */
+    .whats-interest {
+        @include font(56);
+        font-weight: 500;
+        letter-spacing: 0.25rem;
+        margin-bottom: 4rem;
+        span {
+            color: #20a44b;
+            letter-spacing: -0.25rem;
+        }
+    }
+    .interest-lead {
+        font-weight: 500;
+        @include font(24);
+        color: #3e8d58;
+        margin-top: 4rem;
+    }
+/* interest area end */
+}

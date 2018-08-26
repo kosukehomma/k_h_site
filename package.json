@@ -1,0 +1,45 @@
+{
+  "name": "gulp-project",
+  "description": "gulp-project01",
+  "scripts": {
+    "prod": "webpack --mode production",
+    "dev": "webpack --mode development -w"
+  },
+  "repository": "https://github.com/honmakousuke/gulp-project.git",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "autoprefixer": "^8.6.5",
+    "babel-loader": "^8.0.0-beta.4",
+    "browser-sync": "^2.24.5",
+    "css-loader": "^1.0.0",
+    "csswring": "^6.0.3",
+    "gulp": "^4.0.0",
+    "gulp-ejs": "^3.1.3",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.1.0",
+    "postcss-flexbugs-fixes": "^3.3.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 ChromeAndroid versions",
+    "last 2 iOS versions",
+    "last 2 Edge versions",
+    "ie 11"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+@mixin font($base: 16) {
+    font-size: $base + px;
+    font-size: $base * 0.1rem;
+}
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity=($opacity * 100));
+}
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin column-width ( $value: 150px) {
+    -webkit-column-width: $value;
+    -moz-column-width: $value;
+    column-width: $value;
+}
+@mixin circle {
+    border-radius: 100%;
+}
+@mixin flexbox {
+    display: -webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display: -webkit-flex;
+    display:flex; 
+}
+@mixin flex-direction($direction) {
+    @if $direction == column {
+        -webkit-flex-direction:vertical;
+        -moz-flex-direction:vertical;
+        -ms-flex-direction:column;
+        -webkit-flex-direction:column;
+        flex-direction:column;
+    } @else if $direction == column-reverse {
+        -webkit-flex-direction:vertical;
+        -moz-flex-direction:vertical;
+        -ms-flex-direction:column-reverse;
+        -webkit-flex-direction:column-reverse;
+        flex-direction:column-reverse;
+    } 
+    @else {
+        -webkit-flex-direction:horizontal;
+        -moz-flex-direction:horizontal;
+        -ms-flex-direction:row;
+        -webkit-flex-direction:row;
+        flex-direction:row;
+    }
+}
+

@@ -2,6 +2,7 @@ const fs = require('fs');
 const gulp = require('gulp'),
 /* scss → CSS変換 */
       sass = require('gulp-sass'),
+      sourcemaps = require('gulp-sourcemaps'),
       postcss = require('gulp-postcss'),
       autoprefixer = require('autoprefixer'),
       flexBugsFixes = require('postcss-flexbugs-fixes'),
@@ -57,9 +58,14 @@ const gulp = require('gulp'),
 
 gulp.task('sass', () => {
     return gulp.src('./src/sass/**/*.scss')
-        .pipe(sass())
-        .pipe(postcss(postcssOption))
-        .pipe(gulp.dest('./public/assets/css'));
+    .pipe(sourcemaps.init())
+    
+    .pipe(sass())
+    .pipe(postcss(postcssOption))
+        
+    .pipe(sourcemaps.write('./maps'))
+        .pipe(gulp.dest('./public/assets/css'))        
+        ;
 });
 
 gulp.task('ejs', ()=> {

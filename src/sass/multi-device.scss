@@ -41,6 +41,9 @@
                 text-align: left;
             }
         }
+        .skills-area {
+            width: 100%;
+        }
     }
 }
 @media screen and (max-width: 640px) {
@@ -158,7 +161,7 @@
         .skills-area {
             .skills-icons {
                 li {
-                    max-width: 58px;
+                    max-width: 56px;
                 }
             }
         }

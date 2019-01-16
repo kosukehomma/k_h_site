@@ -140,6 +140,7 @@
     }
     .skills-area {
         display: block;
+        width: 80%;
         &:last-child {
             margin-bottom: 2.5rem;
         }
@@ -147,7 +148,7 @@
             list-style: none;
             padding-left: 0;
             li {
-                display: inline-block;
+                display: inline-table;
                 max-width:64px;
                 width: 100%;
                 margin-top: 1.25rem;
@@ -163,7 +164,7 @@
                     display: block;
                     margin: -4px 0 0;
                     font-weight: 600;
-                    letter-spacing: 0.75px;
+                    letter-spacing: 0.25px;
                 }
                 
             }
